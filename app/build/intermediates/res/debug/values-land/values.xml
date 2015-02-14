@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/Kevin/AndroidStudioProjects/WicedSense-Android_Studio-/app/src/main/res/values-land/sensor_ui_settings.xml -->
+    <eat-comment/>
+    <dimen name="thermo_range_bottom_margin">29dp</dimen>
+    <dimen name="thermo_range_top_margin">15dp</dimen>
+</resources>

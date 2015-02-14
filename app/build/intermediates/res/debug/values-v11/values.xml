@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/Kevin/AndroidStudioProjects/WicedSense-Android_Studio-/app/src/main/res/values-v11/styles_devicepicker.xml -->
+    <eat-comment/>
+    <color name="black">#FF000000</color>
+    <color name="whitegrey">#FFF2F2F2</color>
+    <!-- From: file:/C:/Users/Kevin/AndroidStudioProjects/WicedSense-Android_Studio-/app/src/main/res/values-v11/styles.xml -->
+    <eat-comment/>
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!-- API 11 theme customizations can go here. -->
+    </style>
+    <!-- From: file:/C:/Users/Kevin/AndroidStudioProjects/WicedSense-Android_Studio-/app/src/main/res/values-v11/styles_devicepicker.xml -->
+    <eat-comment/>
+    <style name="DevicePickerButtonStyle" parent="android:style/Widget.Holo.Light.Button.Borderless.Small"/>
+    <style name="DevicePickerDialogTheme" parent="android:Theme.Holo.Light.Dialog">
+        <item name="android:windowFullscreen">true</item>
+        <item name="@android:windowBackground">@color/whitegrey</item>
+        <item name="@android:textColor">@color/black</item>
+    </style>
+</resources>
