@@ -29,114 +29,150 @@
     tools:context=".FullscreenActivity" >
 
     <LinearLayout
-        android:id="@+id/left_panel"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical" >
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/bg_left_side_1" >
-
-            <fragment
-                android:id="@+id/fragment_gyro"
-                android:name="com.broadcom.app.wicedsense.GyroFragment"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:tag="fragment_gyro"
-                tools:layout="@layout/gyro_fragment" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/bg_left_side_2" >
-
-            <fragment
-                android:id="@+id/fragment_compass"
-                android:name="com.broadcom.app.wicedsense.CompassFragment"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:tag="fragment_compass"
-                tools:layout="@layout/compass_fragment" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/bg_left_side_3" >
-
-            <fragment
-                android:id="@+id/fragment_accelerometer"
-                android:name="com.broadcom.app.wicedsense.AccelerometerFragment"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:tag="fragment_accelerometer"
-                tools:layout="@layout/accelerometer_fragment" />
-        </FrameLayout>
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1" >
-
-        <ImageView
-            android:id="@+id/broadcom_logo"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="5dp"
-            android:scaleType="fitEnd"
-            android:src="@drawable/broadcom_logo_2" />
-
-        <Button
-            android:id="@+id/connection_state"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginBottom="60dp"
-            android:text="@string/no_device" />
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
 
         <LinearLayout
+            android:id="@+id/left_panel"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@id/connection_state"
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal" >
+            android:layout_weight="1"
+            android:orientation="vertical" >
 
             <FrameLayout
-                android:id="@+id/fragment_temp"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" >
-            </FrameLayout>
-            <fragment
-                android:id="@+id/fragment_pres"
-                android:name="com.broadcom.app.wicedsense.PressureFragment"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:tag="fragment_pres"
-                tools:layout="@layout/pressure_fragment" />
+                android:background="@drawable/bg_left_side_1" >
 
-            <fragment
-                android:id="@+id/fragment_humd"
-                android:name="com.broadcom.app.wicedsense.HumidityFragment"
-                android:layout_width="0dp"
+                <fragment
+                    android:id="@+id/fragment_gyro"
+                    android:name="com.broadcom.app.wicedsense.GyroFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:tag="fragment_gyro"
+                    tools:layout="@layout/gyro_fragment" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:tag="fragment_humd"
-                tools:layout="@layout/humidity_fragment" />
+                android:background="@drawable/bg_left_side_2" >
+
+                <fragment
+                    android:id="@+id/fragment_compass"
+                    android:name="com.broadcom.app.wicedsense.CompassFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="fragment_compass"
+                    tools:layout="@layout/compass_fragment" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_left_side_3" >
+
+                <fragment
+                    android:id="@+id/fragment_accelerometer"
+                    android:name="com.broadcom.app.wicedsense.AccelerometerFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:tag="fragment_accelerometer"
+                    tools:layout="@layout/accelerometer_fragment" />
+
+            </FrameLayout>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/target_temperature"
+                android:hint="Temperature"
+                android:layout_gravity="center"
+                android:enabled="true"
+                android:background="@color/whitegrey"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/target_humidity"
+                android:hint="Humidity"
+                android:layout_gravity="center"
+                android:enabled="true"
+                android:background="@color/whitegrey"
+                android:textColor="@color/black" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set Enviroment"
+                android:id="@+id/update_targets"
+                android:hint="Send Values"
+                android:layout_gravity="center" />
         </LinearLayout>
-    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/broadcom_logo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:scaleType="fitEnd"
+                android:src="@drawable/broadcom_logo_2" />
+
+            <Button
+                android:id="@+id/connection_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="60dp"
+                android:text="@string/no_device" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/connection_state"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal" >
+
+                <FrameLayout
+                    android:id="@+id/fragment_temp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+                </FrameLayout>
+                <fragment
+                    android:id="@+id/fragment_pres"
+                    android:name="com.broadcom.app.wicedsense.PressureFragment"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:tag="fragment_pres"
+                    tools:layout="@layout/pressure_fragment" />
+
+                <fragment
+                    android:id="@+id/fragment_humd"
+                    android:name="com.broadcom.app.wicedsense.HumidityFragment"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:tag="fragment_humd"
+                    tools:layout="@layout/humidity_fragment" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout><!-- From: file:/C:/Users/Kevin/AndroidStudioProjects/WicedSense-Android_Studio-/app/src/main/res/layout/main_activity.xml -->
